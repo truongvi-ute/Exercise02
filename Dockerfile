@@ -1,16 +1,7 @@
-# Dùng image Tomcat 9
-FROM tomcat:9.0-jdk11-temurin
+# Bước 1: Chọn image Tomcat 10 / JDK 17
+FROM tomcat:10.1-jdk17
 
-# ----- THÊM DÒNG NÀY ĐỂ SỬA LỖI -----
-# Tắt cổng shutdown (8005) bằng cách đổi nó thành "-1"
-RUN sed -i 's/Server port="8005"/Server port="-1"/' /usr/local/tomcat/conf/server.xml
-# -----------------------------------
-
-# Xóa các ứng dụng web mặc định của Tomcat
-RUN rm -rf /usr/local/tomcat/webapps/*
-
-# Copy file .war của bạn vào
-COPY dist/*.war /usr/local/tomcat/webapps/ROOT.war
-
-# Báo cho Render biết ứng dụng chạy ở port 8080
-EXPOSE 8080
+# Bước 2: Copy thẳng file .war vào.
+# Tomcat sẽ tự động giải nén và ưu tiên ROOT.war hơn thư mục ROOT mặc định.
+# Tên file "EmailListApp.war" của bạn đã được xác nhận là đúng.
+COPY dist/EmailListApp.war /usr/local/tomcat/webapps/ROOT.war
