@@ -1,0 +1,14 @@
+# NetBeans project files
+/nbproject/private/
+/nbproject/private.properties
+/nbproject/Makefile-*.mk
+/nbproject/Package-*.bash
+/nbactions.xml
+
+# Ant build folders
+# Chúng ta bỏ qua 'build' nhưng KHÔNG bỏ qua 'dist'
+/build/
+/nbbuild/
+
+# Files
+.DS_Store
