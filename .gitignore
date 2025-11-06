@@ -1,5 +1,8 @@
-# NetBeans temporary files
+# NetBeans temporary files (NHỮNG DÒNG NÀY ĐÚNG, HÃY GIỮ LẠI)
 nbproject/private/
 build/
 nbbuild/
 nbdist/
+
+# ĐẢM BẢO RẰNG DÒNG "dist/" KHÔNG CÓ Ở ĐÂY
+# (Nếu có, hãy xóa nó đi)
