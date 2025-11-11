@@ -38,8 +38,7 @@ public class EmailListServlet extends HttpServlet {
 
             boolean wantsGeneral = request.getParameter("like") != null; // Đổi từ wantsGeneralUpdates
             boolean wantsEmail = request.getParameter("sendmail") != null; // Đổi từ wantsEmailAnnouncements
-            // store data in User object and save User object in database
-            //User user = new User(firstName, lastName, email);
+            
             User user = new User();
             user.setFirstName(firstName);
             user.setLastName(lastName);

@@ -8,7 +8,7 @@
 <body>
     <img src="./styles/logo.jpg" alt="alt"/>
     <h1>Survey</h1>
-    <p>If you have a moment, we'd appreciate it if you would fill out this survey</p>
+    <p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
     <form action="emailList" method="post">
         <h1>Your information:</h1>
         <input type="hidden" name="action" value="add">        
@@ -19,22 +19,22 @@
         <label>Last Name:</label>
         <input type="text" name="lastName" required><br>
         <label>Date of Birth</label>
-        <input type="text" name="dob" required><br>
+        <input type="date" name="dob" required><br>
         
         <h1>How did you hear about us?</h1>
-        <input type="radio" name="hearAbout" value="sengine">Search engine<br>
-        <input type="radio" name="hearAbout" value="womouth">Word of mouth<br>
-        <input type="radio" name="hearAbout" value="smedia">Social Media<br>
-        <input type="radio" name="hearAbout" value="other">Other<br>
+        <input type="radio" name="hearAbout" value="Search engine">Search engine<br>
+        <input type="radio" name="hearAbout" value="Word of mouth">Word of mouth<br>
+        <input type="radio" name="hearAbout" value="Social Media">Social Media<br>
+        <input type="radio" name="hearAbout" value="Other">Other<br>
         
         <h1>Would you like to receive announcements about new CDs and special offers??</h1>
-        <input type="checkbox" name="like" value="other">YES, I'd like that.<br>
-        <input type="checkbox" name="sendmail" value="other">YES, please send me email announcements.<br>
-        <label>Please contact me by:</label>
+        <input type="checkbox" name="like" value="YES, I'd like that.">YES, I'd like that.<br>
+        <input type="checkbox" name="sendmail" value="YES, please send me email announcements.">YES, please send me email announcements.<br>
+        <label class="inline-label">Please contact me by:</label>
         <select name="contact">
-            <option value="emailandpostal" selected="">Email or postal email</option>
-            <option value="emailonly">Email only</option>
-            <option value="postalemailonly">Postal email only</option>
+            <option value="Email or postal email" selected="">Email or postal email</option>
+            <option value="Email only">Email only</option>
+            <option value="Postal email only">Postal email only</option>
         </select><br>
         <input type="submit" value="Join Now" id="submit">
     </form>

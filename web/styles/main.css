@@ -10,10 +10,16 @@ h1 {
 }
 label {
     float: left;
-    width: 100px;
+    width: 10em;
     margin-bottom: 0.5em;
 }
-input[type="text"], input[type="email"] {
+label.inline-label {
+    float: none;      /* Bỏ float */
+    width: auto;      /* Chiều rộng tự động theo nội dung */
+    margin-right: 0.5em; /* Thêm chút khoảng cách với select box */
+}
+
+input[type="text"], input[type="email"] , input[type="date"]{
     width: 15em;
     margin-left: 0.5em;
     margin-bottom: 0.5em;
@@ -22,5 +28,5 @@ br {
     clear: both;
 }
 #submit {
-    margin-left: 0.5em;
+    margin-top: 2em;
 }
