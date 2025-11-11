@@ -10,22 +10,32 @@ h1 {
 }
 label {
     float: left;
-    width: 10em;
-    margin-bottom: 0.5em;
+    width: 15em;
+    margin-bottom: 1em;
+    margin-right: 0.5em;
 }
 label.inline-label {
-    float: none;      /* Bỏ float */
-    width: auto;      /* Chiều rộng tự động theo nội dung */
+    float: left;      /* Bỏ float */
+    width: 15em;      /* Chiều rộng tự động theo nội dung */
+    margin-bottom: 1em;
     margin-right: 0.5em; /* Thêm chút khoảng cách với select box */
 }
 
 input[type="text"], input[type="email"] , input[type="date"]{
     width: 15em;
     margin-left: 0.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 br {
     clear: both;
+}
+p{
+    font-size: 1rem;
+}
+select, option{
+    width: 15em;
+    margin-left: 0.5em;
+    margin-bottom: 1em;
 }
 #submit {
     margin-top: 2em;

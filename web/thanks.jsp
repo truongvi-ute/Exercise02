@@ -16,13 +16,13 @@
     <span>${user.lastName}</span><br>
     <label>Date of Birth:</label>
     <span>${user.dateOfBirth}</span><br>
-    <label>How did you hear about us?:</label>
+    <label class="inline-label">How did you hear about us?:</label>
     <span>${user.heardFrom}</span><br>
-    <label>Receive general updates?:</label>
+    <label class="inline-label">Receive general updates?:</label>
     <span>${user.wantsGeneralUpdates ? 'Yes' : 'No'}</span><br>
-    <label>Receive email announcements?:</label>
+    <label class="inline-label">Receive email announcements?:</label>
     <span>${user.wantsEmailAnnouncements ? 'Yes' : 'No'}</span><br>
-    <label>Contact method:</label>
+    <label class="inline-label">Contact method:</label>
     <span>${user.contactMethod}</span><br>
     <p>To enter another email address, click on the Back
     button in your browser or the Return button shown
