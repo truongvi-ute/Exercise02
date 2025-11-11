@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>
 </head>
 <body>
-    <h1>Join our email list</h1>
-    <p>To join our email list, enter your name and
-    email address below.</p>
+    <img src="./styles/logo.jpg" alt="alt"/>
+    <h1>Survey</h1>
+    <p>If you have a moment, we'd appreciate it if you would fill out this survey</p>
     <form action="emailList" method="post">
+        <h1>Your information:</h1>
         <input type="hidden" name="action" value="add">        
         <label>Email:</label>
         <input type="email" name="email" required><br>
@@ -17,7 +18,24 @@
         <input type="text" name="firstName" required><br>
         <label>Last Name:</label>
         <input type="text" name="lastName" required><br>
-        <label>&nbsp;</label>
+        <label>Date of Birth</label>
+        <input type="text" name="dob" required><br>
+        
+        <h1>How did you hear about us?</h1>
+        <input type="radio" name="hearAbout" value="sengine">Search engine<br>
+        <input type="radio" name="hearAbout" value="womouth">Word of mouth<br>
+        <input type="radio" name="hearAbout" value="smedia">Social Media<br>
+        <input type="radio" name="hearAbout" value="other">Other<br>
+        
+        <h1>Would you like to receive announcements about new CDs and special offers??</h1>
+        <input type="checkbox" name="like" value="other">YES, I'd like that.<br>
+        <input type="checkbox" name="sendmail" value="other">YES, please send me email announcements.<br>
+        <label>Please contact me by:</label>
+        <select name="contact">
+            <option value="emailandpostal" selected="">Email or postal email</option>
+            <option value="emailonly">Email only</option>
+            <option value="postalemailonly">Postal email only</option>
+        </select><br>
         <input type="submit" value="Join Now" id="submit">
     </form>
 </body>

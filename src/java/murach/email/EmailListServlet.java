@@ -32,12 +32,26 @@ public class EmailListServlet extends HttpServlet {
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
+            String dateOfBirth = request.getParameter("dob"); // Đổi từ dateOfBirth
+            String heardFrom = request.getParameter("hearAbout"); // Đổi từ heardFrom
+            String contactMethod = request.getParameter("contact"); // Đổi từ contactMethod
 
+            boolean wantsGeneral = request.getParameter("like") != null; // Đổi từ wantsGeneralUpdates
+            boolean wantsEmail = request.getParameter("sendmail") != null; // Đổi từ wantsEmailAnnouncements
             // store data in User object and save User object in database
-            User user = new User(firstName, lastName, email);
+            //User user = new User(firstName, lastName, email);
+            User user = new User();
+            user.setFirstName(firstName);
+            user.setLastName(lastName);
+            user.setEmail(email);
+            user.setDateOfBirth(dateOfBirth);
+            user.setHeardFrom(heardFrom);
+            user.setWantsGeneralUpdates(wantsGeneral);
+            user.setWantsEmailAnnouncements(wantsEmail);
+            user.setContactMethod(contactMethod);
+            
             UserDB.insert(user);
             
-            // set User object in request object and set URL
             request.setAttribute("user", user);
             url = "/thanks.jsp";   // the "thanks" page
         }
